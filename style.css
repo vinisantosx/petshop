@@ -1,0 +1,462 @@
+*{margin: 0; padding: 0;}
+
+body{
+    background-color: whitesmoke;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.divCabecalho{
+    background-color: rgb(255, 255, 255);
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(226, 226, 226);
+    margin-top: 20px;
+    margin-bottom: -100px;
+}
+
+.imgCabecalho{
+    width: 220px;
+    height: 110px;
+    margin-left: 45px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.ulCabecalho{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    margin-right: 100px;
+
+}
+
+.ulCabecalho a{
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.SectionHome{
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 80px;
+}
+
+.teste{
+    background-color: blue;
+}
+
+.imgPrincipal{
+    width: 380px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.ulPrincipal{
+    background-color:white;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    margin-top: 150px;
+    margin-left: 140px;
+    margin-right: 150px;
+}
+
+.imgPrincipal {
+    opacity: 1;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  
+  .imgPrincipal:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+/*Estilização da seção Sobre*/
+
+.SectionSobre{
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 6px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.imgSobre{
+    align-items: center;
+    width: 400px;
+    height: 300px;
+}
+
+.TituloSobre{
+    font-size: 30px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.txtSobre{
+    font-size: 18px;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-bottom: 30px;
+}
+/* Estilização da seção Serviços*/
+
+.SectionServico{
+   
+    display: grid;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 12px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btnServicos{
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    color:white;
+    padding: 9px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #000;
+}
+
+.TituloServico{
+    font-size: 30px;
+}
+/*Estilização da seção de produtos e suas respectivas imagens*/
+.gallery {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    margin-bottom: 70px;
+  }
+
+  .tituloProdutos{
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
+
+  }
+
+  .image {
+    margin: 10px;
+    width: calc(33.33% - 80px);
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid rgb(200, 200, 200);
+  }
+  .image img {
+    width: 100%;
+    height: auto;
+ 
+  }
+
+.btnProdutos {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    color:white;
+    padding: 9px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Nome{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    font-size: 18px;
+    text-align: center;
+}
+
+.valor{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+}
+
+/*Estilização da seção de Feedback*/
+
+.feedbacks {
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  .feedback {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .feedback img {
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .feedback blockquote {
+    font-style: italic;
+    font-size: 16px;
+    justify-content: space-between;
+  }
+  
+  .feedback p {
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  .feedbacks {
+    background-color: #f7f7f7;
+  }
+
+  .feedback {
+    border-color: #ddd;
+  }
+
+  .feedback blockquote {
+    color: #666;
+  }
+  
+  .feedback p {
+    color: #333;
+  }
+
+.tituloFeedback{
+    font-size: 30px;
+    margin-left: 12px;
+    margin-bottom: 25px;
+  }
+
+
+  @media (max-width: 768px) {
+    .feedbacks {
+      flex-direction: column;
+    }
+  }
+
+  /*Estilização da seção Cuidados e Alertas*/
+
+.cuidado {
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 80%;
+    margin: 20px auto;
+    border-color: #ddd;
+}
+
+  .cuidado h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+  }
+  
+  .cuidado p {
+    font-size: 20px; 
+    color: #666; 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cuidados h2{
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+  }
+
+  .btnCuidados{
+    width: 20%;
+    margin: 30px auto;
+    background-color: black;
+    color: white;
+    border: 1px solid rgb(200, 200, 200);
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    margin-top:auto;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #000;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    section {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+    /* Estilização seção de Formulário */
+
+    form {
+    width: 40%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    border-color: #ddd;
+    }
+
+    h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    }
+    
+    label {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    color: #666;
+    }
+    
+
+    .inputFormulario {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-color: #ccc;
+    }
+    
+    .btnFormulario {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    }
+
+   .btnFormulario:hover {
+    background-color: #000;
+    }
+
+    /* Estilização da seção de Rodapé */
+
+.container2 {
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .links-importantes, .redes-sociais, .contatos {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+
+  .centralizar{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+ 
+  }
+  
+  li a {
+    font-size: 12px;
+    color: #333;
+    text-decoration: none;
+    color: #000000;
+
+  }
+
+  li p {
+    font-size: 12px;
+    color: #333;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  li a:hover {
+    color: #000;
+    color: #333;
+  }
+  
+  .fa {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #333;
+  }
+
+  /*Estilização dos direitos reservados*/
+
+  .SectionCopy{
+    display: flex;
+    font-size: 10px;
+    justify-content:center;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+    margin-right: 60px;
+    margin-bottom: 30px;
+}
+
+

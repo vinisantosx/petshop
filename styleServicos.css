@@ -1,0 +1,181 @@
+*{margin: 0; padding: 0;}
+
+body{
+    background-color: whitesmoke;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.divCabecalho{
+    background-color: white;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(226, 226, 226);
+    margin-top: 20px;
+    margin-bottom: -100px;
+}
+
+.imgCabecalho{
+    width: 220px;
+    height: 110px;
+    margin-left: 45px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ulCabecalho{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.ulCabecalho a{
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.SectionHome{
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 80px;
+}
+
+.teste{
+    background-color: blue;
+}
+
+.imgPrincipal{
+    width: 380px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.ulPrincipal{
+    background-color:white;
+    list-style-type: none;
+    margin-top: 150px;
+    margin-left: 80px;
+    margin-right: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgPrincipal {
+    opacity: 1;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  
+  .imgPrincipal:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  /*Estilização seção Serviço*/
+
+  .SectionServico{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 16px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: inline-flexbox;
+}
+
+.TituloServico{
+    font-size: 30px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.SubtituloServico{
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.txtServico{
+    font-size: 18px;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+  /* Estilização da seção de Rodapé */
+
+  .container2 {
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .links-importantes, .redes-sociais, .contatos {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+
+  .centralizar{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+ 
+  }
+  
+  li a {
+    font-size: 12px;
+    color: #333;
+    text-decoration: none;
+    color: #000000;
+
+  }
+
+  li p {
+    font-size: 12px;
+    color: #333;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  li a:hover {
+    color: #000;
+    color: #333;
+  }
+  
+  .fa {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #333;
+  }
+
+  /*Estilização dos direitos reservados*/
+
+  .SectionCopy{
+    display: flex;
+    font-size: 10px;
+    justify-content:center;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+    margin-right: 60px;
+    margin-bottom: 30px;
+}
+
