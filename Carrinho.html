@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetStop</title>
+    <link rel="Stylesheet" href="StyleCarrinho.css">
+</head>
+    <body>
+      <nav class="navbar">
+        <a href="index.html"><img src="img/Teste preto e branco logo PetStop.png" alt="Logo da Loja" class="logo"></a>
+    
+        <ul class="navUl">
+          <li><a href="#Produtos" class="navSecoes">Produtos</a></li>
+          <li><a href="Servicos.html" class="navSecoes">Serviços</a></li>
+          <li><a href="#Sobre" class="navSecoes">Sobre</a></li>
+          <li><a href="#Contato" class="navSecoes">Contato</a></li>
+          <li><a href="#" class="navSecoes"></a></li>
+        </ul>
+    
+        <a href="Carrinho.html"><img src="img/LogoCarrinhoCompras.png" alt="Carrinho de Compras" class="carrinho"></a>
+      </nav>
+    </body>
+
+    <div class ="divCarrinho">
+       <section>
+
+        <img src="img/RaçãoGato2.webp"><br>
+
+        <div class="divDesc" >
+            <h1> Ração Qualitá para Gatos adultos Carne e Peixes </h1> <br>
+            <p>- Proteção articular.</p>
+            <p>- Mais energia e L-Carnitina.</p>
+            <p>- Estimulam a síntese de proteína muscular.</p>
+            <p>- Sem corantes e aromatizantes artificiais.</p>
+              
+        </div>
+      
+          <div class="divValores">
+            <h5> a partir de</h5><br>
+            <h1 class="valor">R$16,90</h1><br>
+            <h4>ou 3x de R$ 5,63</h4>
+            <p class="txtQtd"> Quantidade </p>
+            <input type ="button" value=" + " > <input class="inputQtd" type="number" value="dd">
+            <input type ="button" value=" - " >
+            <br>
+            <label class="labelConsulta" for="cepInput">Digite o CEP:</label>
+                    <input type="text" id="cepInput">
+                    <button class="btnCep" buscarEndereco()>Buscar</button>
+                    <br>
+                <div id="endereco"></div>
+        <div>
+            <script>
+                function buscarEndereco() {
+                    
+                    var cep = document.getElementById('cepInput').value;
+                    var url = `https://viacep.com.br/ws/${cep}/json/`;
+            
+                    fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                      
+                         if(data.erro) {
+                              document.getElementById('endereco').innerText = "CEP não encontrado.";
+                        } else {
+                            var endereco = `CEP: ${data.cep}, ${data.logradouro}, ${data.bairro}, ${data.localidade}, ${data.uf}`;
+                            document.getElementById('endereco').innerText = endereco;
+                        }
+                    })
+                    .catch(error => console.error('Erro:', error));
+                    }
+             </script>
+           </div>
+          </div>
+        </section>
+          </div>
+       </section> 
+    </div>
+
+    <div class="divForm">
+      <a name="Contato"></a>
+      <div class="centralizar">
+          <a name="#Contato"></a>
+           <div class="contatos">
+              <h2>Contato</h2>   
+              <ul>
+                  <li><p><i class="Endereço"></i> Endereço: Rua X, 123</p></li>
+                  <li><p><i class="Telefone"></i> Telefone: (11) 1234-5678</p></li>
+                  <li><p><i class="Email"></i> Email: petstop@gmail.com.br</p></li>
+                  <li><p><i class="whatsapp"></i> WhatsApp: (11) 98765-4321</p></li>
+              </ul>
+            </div>
+            <div class="links-importantes">
+              <h2>Links Importantes</h2>
+              <ul>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos de Serviço</a></li>
+                <li><a href="#">Mapa do Site</a></li>
+              </ul>
+            </div>
+            <div class="redes-sociais">
+              <h2>Redes Socias</h2>
+              <ul>
+                <li><a href="https://www.facebook.com/campaign/landing.php"><i class="redeSocial redeSocial-facebook"></i> Facebook</a></li>
+                <li><a href="https://www.instagram.com/vinisanttosx"><i class="redeSocial redeSocial-instagram"></i> Instagram</a></li>
+                <li><a href="https://twitter.com/i/flow/login"><i class="redeSocial redeSocial-twitter"></i> Twitter</a></li>
+                <li><a href="https://www.youtube.com"><i class="redeSocial redeSocial-youtube"></i> YouTube</a></li>
+              </ul>
+            </div>
+          </div>               
+      </section>
+  </div>
+
+  <section class="SectionCopy">
+      <div class="divCopy">
+          <p> © 2024 PetStop. Todos os direitos reservados. Empresa de Produrtos e Serviços PET Ltda - CNPJ: 00.000.000/0000-00, Avenida Brasil Km 947.5 - Galpão Modulo 3640 - CEP 000000-000 - Salvador - BA</p>
+      </div>
+  </section>
+
+</body>
+</html>
