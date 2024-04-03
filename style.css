@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:wght@100..900&display=swap');  
 
 
 * {
-  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
   padding: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   font-family: Inter, sans-serif;
 }
 
@@ -13,7 +14,7 @@ html {
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: rgb(221, 221, 221);
   font-family: sans-serif;
   margin: 0;
   padding: 0;
@@ -35,12 +36,19 @@ body {
   cursor: pointer;
 }
 
+.logo1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
 .navUl {
   display: flex;
   gap: 80px;
 }
 
-.navSecoes{
+.navSecoes {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
@@ -54,13 +62,13 @@ body {
 
 /* Navbar Responsiva */
 @media (max-width: 800px) {
-  .navUl{
+  .navUl {
     display: inline-table;
   }
 }
 
-@media(min-width: 801px){
-  .navUl{
+@media(min-width: 801px) {
+  .navUl {
     display: flex;
   }
 }
@@ -79,7 +87,7 @@ body {
 /* Estilização da seção Principal*/
 
 .imgPrincipal {
-  width: 100%; 
+  width: 100%;
   height: 400px;
   display: flex;
   justify-content: center;
@@ -87,13 +95,13 @@ body {
 }
 
 .ulPrincipal {
-  background-color: white;
+  background-color: rgb(221, 221, 221);
   display: flex;
-  justify-content: space-between  ;
+  justify-content: space-between;
   list-style-type: none;
   align-items: center;
-  margin: 0; 
-  flex-wrap: wrap; 
+  margin: 0;
+  flex-wrap: wrap;
 }
 
 .imgPrincipal {
@@ -103,10 +111,9 @@ body {
 
 .imgPrincipal:hover {
   opacity: 0.8;
-  transform: scale(1.1);
+  transform: scale(1.01);
 }
 
-/* Navbar Responsiva */
 @media (max-width: 759px) {
   .imgPrincipal {
     flex-direction: column;
@@ -120,14 +127,14 @@ body {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .imgPrincipal {
     display: flex;
     align-items: center;
   }
 
   .ulPrincipal {
-    flex-direction:row;
+    flex-direction: row;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,412 +143,584 @@ body {
 
 /*Estilização da seção Sobre*/
 
-.SectionSobre{
-    background-color: rgb(255, 255, 255);
-    display: grid;
-    justify-content: center;
-    text-align:justify;
-    border-radius: 5px;
-    border: 1px solid rgb(255, 255, 255);
-    padding: 20px;
-    margin-bottom: 40px;
-    margin-top: 40px;
-    font-size: 1px;
-    margin-left: 50px;
-    margin-right: 50px;
-
+.SectionSobre {
+  background-color: white;
+  display: grid;
+  justify-content: center;
+  text-align: justify;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 40px;
+  font-size: 16px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
-.imgSobre{
-    align-items: center;
-    width: 400px;
-    height: 300px;
+.imgSobre {
+  align-items: center;
+  max-width: 100%; /* Ajusta a largura máxima da imagem para se adaptar ao contêiner */
+  height: auto; /* Mantém a proporção da imagem */
 }
 
-.TituloSobre{
-    font-size: 25px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
+.TituloSobre {
+  font-size: 1.5em; /* Altera o tamanho do título para uma unidade de medida válida */
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
-.txtSobre{
-    font-size: 15px;
-    justify-content: center;
-    margin-bottom: 30px;
-    margin-top:30px;
+.txtSobre {
+  font-size: 1em; /* Altera o tamanho do texto para uma unidade de medida válida */
+  text-align: start;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
+/* Media query para telas menores */
+@media only screen and (max-width: 768px) {
+  .SectionSobre {
+    margin-left: 2%; /* Ajusta as margens para telas menores */
+    margin-right: 2%; /* Ajusta as margens para telas menores */
+  }
+}
 /* Estilização da seção Serviços*/
 
-.SectionServico{
-   
-    display: grid;
-    border-radius: 5px;
-    border: 2px solid rgb(255, 255, 255);
-    padding: 12px;
-    margin-bottom: 40px;
-    margin-top: 40px;
-    justify-content: center;
-    align-items: center;
+.SectionServico {
+  border-radius: 5px;
+  border: 2px solid rgb(255, 255, 255);
+  display: flex;  
+  margin-left: 25%;
+  margin-top: 50px;
+  margin-right: 25%;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.btnServicos {
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  color: white;
+  padding: 9px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #000000;
+  
+}
+
+.btnServicos a {
+  text-decoration: none;
+}
+
+.TituloServico {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .SectionServico {
+    flex-direction: column; /* Muda para layout de coluna em telas menores */
+  }
+  
+  .TituloServico {
+    font-size: 2em; /* Reduz o tamanho do título para telas menores */
+  }
+  
 
 }
 
-.btnServicos{
-    justify-content: center;
-    text-align: center;
-    margin: auto;
-    display: flex;
-    background-color: rgb(0, 0, 0);
-    color:white;
-    padding: 9px;
-    font-weight: bold;
-    cursor: pointer;
-    border: 1px solid #000;
-    border-radius: 5px;
-    background-color: #000;
-}
-
-.TituloServico{
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+@media only screen and (max-width: 480px) {
+  .TituloServico {
+    font-size: 1.8em;
+  }
 }
 
 /*Estilização da seção de produtos e suas respectivas imagens*/
+
+.SectionProdutos {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 5%;
+  text-align: center;
+}
+
 .gallery {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: white;
-    border-radius: 5px;
-    border: 2px solid rgb(255, 255, 255);
-    margin-bottom: 70px;
-  }
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2%;
+  border: 2px solid rgb(255, 255, 255);
+  margin-bottom: 3%;
+  align-items: center;
+  text-align: center;
+}
 
-  .tituloProdutos{
-    font-size: 30px;
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    border-radius: 5px;
-    border: 2px solid rgb(255, 255, 255);
-    padding: 20px;
+.tituloProdutos {
+  font-size: 25px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+  border: 1px solid rgb(200, 200, 200);
+  background-color: rgb(255, 255, 255);  
+}
 
-  }
+.image {
+  margin: 1%;
+  width: 20%; 
+  overflow: hidden;
+  opacity: 1;
+  transition: transform 0.8s, opacity 0.7s;
+}
 
-  .image {
-    margin: 10px;
-    width: calc(33.33% - 80px);
-    overflow: hidden;
-    border-radius: 5px;
-    border: 1px solid rgb(200, 200, 200);
-  }
-  .image img {
-    width: 100%;
-    height: auto;
- 
-  }
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+.image:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
 
 .btnProdutos {
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    display: flex;
-    background-color: rgb(0, 0, 0);
-    color:white;
-    padding: 9px;
-    font-weight: bold;
-    cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 9px;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+.centrInfo{
+  align-items: center;
+  text-align: center;
 }
 
 .Nome{
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    display: flex;
-    font-size: 18px;
-    text-align: center;
+  font-size: 1.1em;
 }
 
-.valor{
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    display: flex;
-    font-size: 20px;
-    text-align: center;
+.valor {
+  font-size: 1.2em;
 }
 
+/* Media query para telas menores */
+@media only screen and (max-width: 768px) {
+  .gallery {
+    flex-wrap: wrap; /* Muda para o modo de quebra de linha */
+  }
+  
+  .image {
+    width: 45%; /* Ajusta o tamanho da imagem para ocupar 45% da largura em telas menores */
+    margin: 2.5%; /* Adiciona um pequeno espaço entre as imagens */
+  }
+}
+
+/*.SectionProdutos {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 5%;
+  text-align: center;
+  
+}
+
+.gallery {  
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2%;
+  border: 2px solid rgb(255, 255, 255);
+  margin-bottom: 3%;
+  align-items: center;
+  text-align: center;
+
+}
+
+.tituloProdutos {
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 20px;
+  margin-bottom: -5px;
+  margin-top: 50px;
+  border: 1px solid rgb(200, 200, 200);
+  background-color: rgb(237 237, 237);  
+}
+
+.image {
+  margin: 1%;
+  width: 20%; 
+  overflow: hidden;
+  align-items: center;
+  opacity: 1;
+  transition: transform 0.8s, opacity 0.7s;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+.image:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.btnProdutos {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 9px;
+  margin: auto;
+  font-weight: bold;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+}
+
+.centrInfo{
+  align-items: center;
+  text-align: center;
+  justify-content: ;
+}
+
+.Nome{
+  font-size: 1.1em;
+  align-items: center;
+}
+
+.valor {
+  font-size: 1.2em;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .image {
+    width: 45%; 
+  }
+  .tituloProdutos {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .image {
+    width: 100%; 
+  }
+
+  .SectionProdutos {
+    padding: 10px;
+  }
+
+  .tituloProdutos {
+    font-size: 1.8em;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+*/
 /*Estilização da seção de Feedback*/
 
 .feedbacks {
-    width: 80%;
-    margin: 20px auto;
-  }
-  
-  .feedback {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-  }
-  
-  .feedback img {
-    float: left;
-    margin-right: 10px;
-  }
-  
-  .feedback blockquote {
-    font-style: italic;
-    font-size: 16px;
-    justify-content: space-between;
-  }
-  
-  .feedback p {
-    font-weight: bold;
-    text-align: right;
-  }
-  
+  width: 80%;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 20px;
+  justify-content: center;  
+}
+
+.feedback {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  background-color: white;
+}
+
+.feedback img {
+  float: left;
+  margin-right: 10px;
+}
+
+.feedback blockquote {
+  font-style: italic;
+  font-size: 16px;
+  justify-content: space-between;
+}
+
+.feedback p {
+  font-weight: bold;
+  text-align: right;
+}
+
+.feedbacks {
+  background-color: #f7f7f7;
+}
+
+.feedback {
+  border-color: #ddd;
+}
+
+.feedback blockquote {
+  color: #666;
+}
+
+.feedback p {
+  color: #333;
+}
+
+.tituloFeedback {
+  font-size: 30px;
+  margin-left: 12px;
+  margin-bottom: 25px;
+}
+
+
+@media (max-width: 768px) {
   .feedbacks {
-    background-color: #f7f7f7;
+    flex-direction: column;
   }
+}
 
-  .feedback {
-    border-color: #ddd;
-  }
-
-  .feedback blockquote {
-    color: #666;
-  }
-  
-  .feedback p {
-    color: #333;
-  }
-
-.tituloFeedback{
-    font-size: 30px;
-    margin-left: 12px;
-    margin-bottom: 25px;
-  }
-
-
-  @media (max-width: 768px) {
-    .feedbacks {
-      flex-direction: column;
-    }
-  }
-
-  /*Estilização da seção Cuidados e Alertas*/
+/*Estilização da seção Cuidados e Alertas*/
 
 .cuidado {
-    padding: 13px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    width: 80%;
-    margin: 20px auto;
-    border-color: #ddd;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 20px auto;
+  background-color: white;
+  border-color: #ddd;
+  margin-top: 5%; 
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.cuidado a{
+  display: flex;
+}
+
+.cuidado h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 
 }
 
-  .cuidado h3 {
-    font-size: 22px;
-    font-weight: bold;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    
-  }
-  
-  .cuidado p {
-    font-size: 20px; 
-    color: #666; 
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
+.cuidado p {
+  font-size: 20px;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
 
-  .cuidados h2{
-    width: 80%;
-    margin: 30px auto;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 35px;
-  }
+.cuidados h2 {
+  width: 80%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+}
 
+.btnCuidados {
+  width: 100%;
+  background-color: black;
+  color: white;
+  border: 1px solid rgb(200, 200, 200);
+  padding: 12px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+
+@media (max-width: 490px) {
   .btnCuidados{
-    width: 20%;
-    margin: 30px auto;
-    background-color: black;
-    color: white;
-    border: 1px solid rgb(200, 200, 200);
-    padding: 8px;
-    display: flex;
-    justify-content: center;
-    margin-top:auto;
-    border: 1px solid #000;
-    border-radius: 5px;
-    background-color: #000;
-    font-weight: bold;
-    cursor: pointer;
+    margin-left: 5%;
+    margin-right: 5%;
   }
-
-  @media (max-width: 768px) {
-    section {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-    /* Estilização seção de Formulário */
-
-    form {
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #ffffff;
-    border-color: #ddd;
-    }
-
-    h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    }
-    
-    label {
-    font-size: 16px;
-    font-weight: normal;
-    margin-bottom: 5px;
-    color: #666;
-    }
-    
-
-    .inputFormulario {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    border-color: #ccc;
-    }
-    
-    .btnFormulario {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    background-color: #000;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #fff;
-    }
-
-   .btnFormulario:hover {
-    background-color: #000;
-    }
-
-    @media (max-width: 759px) {
-      .form {
-        display: grid;
-      }
-    
-    }
-    
-    @media (min-width: 672px) {
-      .form {
-        display: grid;
-      }
-    }
-
-    /* Estilização da seção de Rodapé */
-
-    .divForm {
-    justify-content: center;
-    align-items: center;
-    display: flex;  
-    text-align: center;
-  }
-
-  .links-importantes, .redes-sociais, .contatos {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-  }
-
-  .centralizar{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
- 
-  }
-  
-  li a {
-    font-size: 12px;
-    color: #333;
-    text-decoration: none;
-    color: #000000;
-
-  }
-
-  li p {
-    font-size: 12px;
-    color: #333;
-    text-decoration: none;
-    color: #000000;
-  }
-
-  li a:hover {
-    color: #000;
-    color: #333;
-  }
-  
-  .redeSocial {
-    font-size: 20px;
-    margin-right: 10px;
-    color: #333;
-  }
-
-  @media (maxwidth: 759px) {
-    .divform {
-      width: 80%;
-    }
-  
-  }
-  
-  @media (min-width: 711px) {
-    .divform {
-      display: grid;
-      flex-direction: column;
-    }
-  }
-
-  /*Estilização dos direitos reservados*/
-
-  .SectionCopy{
-    display: flex;
-    font-size: 10px;
-    justify-content:center;
-    text-align: center;
-    margin: auto;
-    margin-top: 50px;
-    color: rgb(0, 0, 0);
-    margin-right: 60px;
-    margin-bottom: 30px;
 }
 
+/* Estilização seção de Formulário */
+
+form {
+  margin: 20px auto;
+  padding: 20px;
+  margin-top: 5%; 
+  margin-left: 35%;
+  margin-right: 35%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border-color: #ddd;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+
+.inputFormulario {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border-color: #ccc;
+}
+
+.btnFormulario {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btnFormulario:hover {
+  background-color: #3e3e3e;
+}
+
+@media (max-width: 759px) {
+  form{
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+@media (min-width: 760px) {
+  form{
+    margin-left: 23%;
+    margin-right: 23%;
+  }
+}
+
+
+/* Estilização da seção de Rodapé */
+
+.divForm {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: auto;
+  text-align: center;
+}
+
+.links-importantes,
+.redes-sociais,
+.contatos {
+  
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  
+}
+
+.centralizar {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li a,
+li p {
+  font-size: 12px;
+  color: #333;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #000;
+}
+
+.redeSocial {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #333;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .divForm {
+    flex-direction: column; /* Altera o layout para coluna em telas menores */
+  }
+  
+}
+
+@media only screen and (max-width: 474px) {
+  .centralizar {
+    width: 50%; /* Define a largura para ocupar 90% da tela */
+    margin-left: 1%;
+    margin-right: 1%;
+    display: grid;
+  }
+}
+
+/*Estilização dos direitos reservados*/
+
+.SectionCopy {
+  font-size: 10px;
+  margin-top: 50px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.divCopy{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}

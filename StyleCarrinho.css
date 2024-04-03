@@ -3,8 +3,13 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   font-family: Inter, sans-serif;
+}
+
+.tituloCarrinho{
+  justify-content: center;
+  display: flex;
 }
 
 html {
@@ -12,7 +17,7 @@ html {
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: #dddddddd;
   font-family: sans-serif;
   margin: 0;
   padding: 0;
@@ -34,13 +39,20 @@ body {
   cursor: pointer;
 }
 
+.logo1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
 .navUl {
   display: flex;
   gap: 80px;
   list-style-type: none;
 }
 
-.navSecoes{
+.navSecoes {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
@@ -54,264 +66,258 @@ body {
 
 /* Navbar Responsiva */
 @media (max-width: 800px) {
-  .navUl{
+  .navUl {
     display: inline-table;
   }
 }
 
-@media(min-width: 801px){
-  .navUl{
+@media(min-width: 801px) {
+  .navUl {
     display: flex;
   }
 }
+
+/*Calculo style*/
+
+
+
 
 /*Estilização da seção de img do produto*/
 
-section{
-    display: flex;
-    padding: 80px;
+.imgProduto {
+  width: 100px;
+  height: 100px;
 }
 
-.divValores{
-    justify-content: center;
-    align-items: center;
-    margin-right: 80px;
+.carrinho {
+  display: flex;
 }
 
-.divValores h5{
-    font-size: 15px;
-}
+/*Estilização dos direitos reservados*/
 
-/*Estilização da seção de Carrinho*/
-
-.inputQtd{
-    padding: 3px;
-    align-items:  center;
-    text-align: center;
-}
-
-.divCarrinho{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.divValores{
-    margin-left: 20px;
-}
-
-.divCarrinho img{
-    width: 300px;
-}
-
-.divDesc{
-   margin-left: 50px;
-   
-}
-
-.divDesc h3{
-    font-size: 25px;
-    
-}
-
-.divDesc p{
-    font-size: 14px;
-    grid: 10px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
-.txtQtd{
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-@media (max-width: 759px) {
-    .divValores {
-      display: grid;
-    }
-  
-  }
-  
-  @media (min-width: 672px) {
-    .divValores {
-      display: grid;
-    }
-  }
-
-/* Estilização seção de Formulário */
-
-form {
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #ffffff;
-    border-color: #ddd;
-    }
-
-    h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    }
-    
-    label {
-    font-size: 16px;
-    font-weight: normal;
-    margin-bottom: 5px;
-    color: #666;
-    }
-    
-
-    .inputFormulario {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    border-color: #ccc;
-    }
-    
-    .btnFormulario {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    background-color: #000;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #fff;
-    }
-
-   .btnFormulario:hover {
-    background-color: #000;
-    }
-
-    @media (max-width: 759px) {
-      .form {
-        display: grid;
-      }
-    
-    }
-    
-    @media (min-width: 672px) {
-      .form {
-        display: grid;
-      }
-    }
-
-    /* Estilização da seção de Rodapé */
-
-    .divForm {
-    justify-content: center;
-    align-items: center;
-    display: flex;  
-    text-align: center;
-  }
-
-  .links-importantes, .redes-sociais, .contatos {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-  }
-
-  .centralizar{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
- 
-  }
-  
-  li a {
-    font-size: 12px;
-    color: #333;
-    text-decoration: none;
-    color: #000000;
-
-  }
-
-  li p {
-    font-size: 12px;
-    color: #333;
-    text-decoration: none;
-    color: #000000;
-  }
-
-  li a:hover {
-    color: #000;
-    color: #333;
-  }
-  
-  .redeSocial {
-    font-size: 20px;
-    margin-right: 10px;
-    color: #333;
-  }
-
-  @media (maxwidth: 759px) {
-    .divform {
-      width: 80%;
-    }
-  
-  }
-  
-  @media (min-width: 711px) {
-    .divform {
-      display: grid;
-      flex-direction: column;
-    }
-  }
-
-  /*Estilização dos direitos reservados*/
-
-  .SectionCopy{
-    display: flex;
-    font-size: 10px;
-    justify-content:center;
-    text-align: center;
-    margin: auto;
-    color: rgb(0, 0, 0);
-    margin-right: 60px;
-    margin-bottom: 30px;
+.SectionCopy {
+  display: flex;
+  font-size: 10px;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  color: rgb(0, 0, 0);
+  margin-right: 60px;
+  margin-bottom: 30px;
 }
 
 /*Estilização do CEP*/
 
-.consultaCEP{
-    align-items: center;
-    margin: auto;
-    justify-content: center;
-    display: flex;
-    font-size: 30px;
-    margin-bottom: 30px;
+.consultaCEP {
+  margin-top: 30px;
+  display: flex;
+  font-size: 30px;
+  margin-bottom: 30px;
 }
 
-.labelConsulta{
-    font-size: 18px;
-    color: black;
+.labelConsulta {
+  font-size: 18px;
+  color: black;
 }
 
-.iconConsulta{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin: auto;
-    width: 50px;
-    height: 50px;
-    margin-bottom: 30px;
+.iconConsulta {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 30px;
 }
 
-.btnCep{
-    background-color: black;
-    color: white;
-    margin-top: 10px;
+.btnCep {
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+}
+
+/* Estilização da seção de Rodapé */
+
+.divForm {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: auto;
+  text-align: center;
+}
+
+.links-importantes,
+.redes-sociais,
+.contatos {
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+
+}
+
+.centralizar {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li a,
+li p {
+  font-size: 12px;
+  color: #333;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #000;
+}
+
+.redeSocial {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #333;
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .divForm {
+    flex-direction: column;
+    /* Altera o layout para coluna em telas menores */
+  }
+
+}
+
+@media only screen and (max-width: 474px) {
+  .centralizar {
+    width: 50%;
+    /* Define a largura para ocupar 90% da tela */
+    margin-left: 1%;
+    margin-right: 1%;
+    display: grid;
+  }
+}
+
+
+/*Estilização dos direitos reservados*/
+
+.SectionCopy {
+  font-size: 10px;
+  margin-top: 50px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.divCopy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+/*Style Seção de carrinho*/
+
+.container {
+  display: flex;
+  margin-bottom: 100px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.imgCarrinho {
+  margin-left: 70px;
+  margin-right: 70px;
+  padding: 20px;
+}
+
+.descricao {
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 60px;
+  padding: 20px;
+}
+
+.pagCarrinho {
+  margin-left: 70px;
+  margin-right: 70px;
+
+  padding: 20px;
+}
+
+/* Estilização da div de Descrição */
+
+.divDesc {
+  margin-left: 70px;
+  margin-right: 100px;
+  padding: 50px;
+  border-radius:5px;
+  border: 1px solid rgb(200, 200, 200);
+  background-color: white;
+}
+
+.divMaeDesc {
+  display: flex;
+  border: 5px;
+  margin-bottom: 80px;
+}
+
+/* Estilização da div de Avaliação */
+
+.divMaeAvalia{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+  text-align: center;
+}
+
+label {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.btnFormulario {
+  width: 40%;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btnFormulario:hover {
+  background-color: #464646;
+}
+
+@media (max-width: 759px) {
+  form{
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+@media (min-width: 760px) {
+  form{
+    margin-left: 23%;
+    margin-right: 23%;
+  }
 }

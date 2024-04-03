@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const quantityInput = document.getElementById('quantity1');
+    const quantidadeInput = document.getElementById('quantidade1');
     const subtotalElement = document.getElementById('subtotal1'); 
     const priceElement = document.querySelector('.price');
     const totalElement = document.getElementById('total');
  
     function calculateSubtotal() {
-      const quantity = parseInt(quantityInput.value); 
+      const quantidade = parseInt(quantityInput.value); 
       const price = parseFloat(priceElement.textContent);
       const subtotal = quantity * price; 
       subtotalElement.textContent = `Subtotal: R$ ${subtotal.toFixed(2)}`; 
