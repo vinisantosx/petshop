@@ -20,26 +20,36 @@ body {
   padding: 0;
 }
 
+
 .navbar {
-  background-color: #fff;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   margin-bottom: 30px;
   margin-top: 20px;
+  position: relative;
 }
 
-.logo {
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%; 
+  transform: translateX(-50%);
+  width: 100%; 
+  height: 6px; 
+  background-color: rgb(74, 8, 121); 
+}
+
+.navbar:hover {
+  color: #000000; 
+}
+
+.logoPetStop {
   width: 125px;
   height: 75px;
-  cursor: pointer;
-}
-
-.logo1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
 }
 
@@ -60,6 +70,17 @@ body {
   cursor: pointer;
 }
 
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.pesquisa {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+
 /* Navbar Responsiva */
 @media (max-width: 800px) {
   .navUl {
@@ -70,6 +91,13 @@ body {
 @media(min-width: 801px) {
   .navUl {
     display: flex;
+  }
+}
+
+@media(max-width: 801px) {
+  .navSecoes {
+    text-align: center;
+    align-items: center;
   }
 }
 
@@ -102,6 +130,7 @@ body {
   align-items: center;
   margin: 0;
   flex-wrap: wrap;
+  box-shadow: 25px 25px 25px rgba(108, 2, 131, 0.1); 
 }
 
 .imgPrincipal {
@@ -144,76 +173,103 @@ body {
 /*Estilização da seção Sobre*/
 
 .SectionSobre {
-  background-color: white;
-  display: grid;
-  justify-content: center;
-  text-align: justify;
-  border-radius: 5px;
-  border: 1px solid rgb(255, 255, 255);
-  padding: 40px;
-  font-size: 16px;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  background-color: #f4f4f4; /* Cor de fundo da seção */
+  padding: 50px; /* Espaçamento interno da seção */
 }
 
-.imgSobre {
+.btnSobreNos{
+  width: 30%;
+  justify-content: center;
+  margin: auto;
   align-items: center;
-  max-width: 100%; /* Ajusta a largura máxima da imagem para se adaptar ao contêiner */
-  height: auto; /* Mantém a proporção da imagem */
+  display: flex;
+  color: white;
+  border: 1px solid rgb(200, 200, 200);
+  padding: 12px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-top: 100px;
+  background-color: rgb(108, 4, 188);
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .TituloSobre {
-  font-size: 1.5em; /* Altera o tamanho do título para uma unidade de medida válida */
-  justify-content: center;
-  display: flex;
-  align-items: center;
+  font-size: 2em; /* Tamanho da fonte do título */
+  color: #333; /* Cor do título */
+  margin-top: 6%;
+  margin-bottom: 20px; /* Espaçamento inferior */
+  margin-left: 3%;
 }
+
 
 .txtSobre {
-  font-size: 1em; /* Altera o tamanho do texto para uma unidade de medida válida */
-  text-align: start;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  font-size: 1.2em; /* Tamanho da fonte do texto */
+  line-height: 1.6; /* Altura da linha para melhor legibilidade */
+  color: #666; /* Cor do texto */
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-/* Media query para telas menores */
+@media (max-width: 768px) {
+  .SectionSobre {
+    padding: 30px; /* Espaçamento interno menor em telas menores */
+  }
+
+  .TituloSobre {
+    font-size: 1.5em; /* Tamanho do título menor em telas menores */
+  }
+
+  .txtSobre {
+    font-size: 1em; /* Tamanho do texto menor em telas menores */
+  }
+
+  .btnSobreNos{
+    width: 50%;
+  }
+
+}
+
 @media only screen and (max-width: 768px) {
   .SectionSobre {
-    margin-left: 2%; /* Ajusta as margens para telas menores */
-    margin-right: 2%; /* Ajusta as margens para telas menores */
+    margin-left: 2%; 
+    margin-right: 2%; 
   }
 }
+
 /* Estilização da seção Serviços*/
 
 .SectionServico {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   border-radius: 5px;
-  border: 2px solid rgb(255, 255, 255);
-  display: flex;  
-  margin-left: 25%;
+  border: 2px solid rgb(170, 170, 170);
+  display: grid;  
   margin-top: 50px;
-  margin-right: 25%;
   text-align: center;
   justify-content: center;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 .btnServicos {
+  width: 40%;
   justify-content: center;
-  text-align: center;
   margin: auto;
+  align-items: center;
   display: flex;
   color: white;
-  padding: 9px;
+  padding: 12px;
+  border: 1px solid #bababa;
+  border-radius: 5px;
+  background-color: rgb(224, 217, 7);
   font-weight: bold;
   cursor: pointer;
-  border-radius: 5px;
-  background-color: #000000;
-  
 }
 
-.btnServicos a {
+.aServ{
   text-decoration: none;
 }
 
@@ -225,13 +281,14 @@ body {
   
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 805px) {
   .SectionServico {
-    flex-direction: column; /* Muda para layout de coluna em telas menores */
+    flex-direction: column; 
+    width: 80%;
   }
   
   .TituloServico {
-    font-size: 2em; /* Reduz o tamanho do título para telas menores */
+    font-size: 2em; 
   }
   
 
@@ -246,201 +303,150 @@ body {
 /*Estilização da seção de produtos e suas respectivas imagens*/
 
 .SectionProdutos {
-  margin-left: 5%;
-  margin-right: 5%;
-  padding: 5%;
+  margin: 0 auto;
+  max-width: 1200px; 
+  padding: 20px;
+}
+
+
+.tituloProdutos {
+  font-size: 36px;
+  font-family: 'Arial', sans-serif; 
   text-align: center;
+  margin-bottom: 20px;
+  color: #333; 
+  margin-bottom: 70px;
+  position: relative;
+  margin-top: 100px;
+}
+
+.tituloProdutos::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%; 
+  transform: translateX(-50%);
+  width: 50%; 
+  height: 4px; 
+  background-color: #dfd109; 
+}
+
+.tituloProdutos:hover {
+  color: #000000; 
 }
 
 .gallery {
   display: flex;
-  justify-content: center;
-  background-color: white;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
+
+.produto {
+  width: calc(16.666% - 20px); 
+  margin-bottom: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  padding: 2%;
-  border: 2px solid rgb(255, 255, 255);
-  margin-bottom: 3%;
-  align-items: center;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid rgb(163, 163, 163);
+  transition: transform 0.3s ease; 
+}
+
+.produto:hover {
+  transform: translateY(-5px); 
+}
+
+.imgProd {
+  width: 100%;
+  height: auto;
+}
+
+.infoProduto {
+  padding: 20px;
   text-align: center;
 }
 
-.tituloProdutos {
-  font-size: 25px;
-  text-align: center;
-  border-radius: 5px;
-  padding: 20px;
+.Nome {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.valor {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
   margin-bottom: 20px;
-  margin-left: 15%;
-  margin-right: 15%;
-  border: 1px solid rgb(200, 200, 200);
-  background-color: rgb(255, 255, 255);  
-}
-
-.image {
-  margin: 1%;
-  width: 20%; 
-  overflow: hidden;
-  opacity: 1;
-  transition: transform 0.8s, opacity 0.7s;
-}
-
-.image img {
-  width: 100%;
-  height: auto;
-}
-
-.image:hover {
-  opacity: 0.9;
-  transform: scale(1.05);
 }
 
 .btnProdutos {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  padding: 9px;
-  align-items: center;
+  background-color: #470f78;
+  color: #fff;
+  padding: 10px 20px;
   font-weight: bold;
   cursor: pointer;
   text-align: center;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 100%;
 }
 
-.centrInfo{
-  align-items: center;
+.btnProdutos:hover {
+  background-color: #0056b3;
+}
+
+.btnProdutosAdd{
+  background-color: #470f78;
+  color: #fff;
+  margin-top: 5px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
   text-align: center;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 100%;
 }
 
-.Nome{
-  font-size: 1.1em;
+.btnProdutosAdd:hover {
+  background-color: #248f07;
 }
 
-.valor {
-  font-size: 1.2em;
-}
-
-/* Media query para telas menores */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
   .gallery {
-    flex-wrap: wrap; /* Muda para o modo de quebra de linha */
+    flex-wrap: wrap;
   }
   
-  .image {
-    width: 45%; /* Ajusta o tamanho da imagem para ocupar 45% da largura em telas menores */
-    margin: 2.5%; /* Adiciona um pequeno espaço entre as imagens */
+  .produto {
+    width: calc(50% - 2px); 
+    margin-bottom: 20px; 
+    margin-right: 0; 
   }
 }
 
-/*.SectionProdutos {
-  margin-left: 5%;
-  margin-right: 5%;
-  padding: 5%;
-  text-align: center;
-  
-}
-
-.gallery {  
-  display: flex;
-  justify-content: center;
-  background-color: white;
-  border-radius: 5px;
-  padding: 2%;
-  border: 2px solid rgb(255, 255, 255);
-  margin-bottom: 3%;
-  align-items: center;
-  text-align: center;
-
-}
-
-.tituloProdutos {
-  font-size: 35px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  border-radius: 5px;
-  margin-left: 25%;
-  margin-right: 25%;
-  padding: 20px;
-  margin-bottom: -5px;
-  margin-top: 50px;
-  border: 1px solid rgb(200, 200, 200);
-  background-color: rgb(237 237, 237);  
-}
-
-.image {
-  margin: 1%;
-  width: 20%; 
-  overflow: hidden;
-  align-items: center;
-  opacity: 1;
-  transition: transform 0.8s, opacity 0.7s;
-}
-
-.image img {
-  width: 100%;
-  height: auto;
-}
-
-.image:hover {
-  opacity: 0.9;
-  transform: scale(1.05);
-}
-
-.btnProdutos {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  padding: 9px;
-  margin: auto;
-  font-weight: bold;
-  cursor: pointer;
-  align-items: center;
-  text-align: center;
-}
-
-.centrInfo{
-  align-items: center;
-  text-align: center;
-  justify-content: ;
-}
-
-.Nome{
-  font-size: 1.1em;
-  align-items: center;
-}
-
-.valor {
-  font-size: 1.2em;
-  align-items: center;
-}
-
-@media only screen and (max-width: 768px) {
-  .image {
-    width: 45%; 
-  }
-  .tituloProdutos {
-    margin-left: 25%;
-    margin-right: 25%;
+@media only screen and (min-width: 501px) {
+  .produto {
+    width: calc(30% - 2px);
+    margin-bottom: 20px; 
+    margin-right: 0; 
   }
 }
 
-@media only screen and (max-width: 767px) {
-  .image {
-    width: 100%; 
-  }
-
-  .SectionProdutos {
-    padding: 10px;
-  }
-
-  .tituloProdutos {
-    font-size: 1.8em;
-    margin-left: 15%;
-    margin-right: 15%;
+@media only screen and (min-width: 900px) {
+  .produto {
+    width: calc(16.666% - 2px);
+    margin-bottom: 20px; 
+    margin-right: 0; 
   }
 }
-*/
+
 /*Estilização da seção de Feedback*/
 
 .feedbacks {
-  width: 80%;
+  width: 100%;
+  height: auto;
   align-items: center;
   margin: auto;
   margin-bottom: 20px;
@@ -453,7 +459,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 10px;
   margin-bottom: 50px;
-  background-color: white;
+  background-color: rgb(74, 8, 121);
 }
 
 .feedback img {
@@ -481,11 +487,11 @@ body {
 }
 
 .feedback blockquote {
-  color: #666;
+  color: #ffffff;
 }
 
 .feedback p {
-  color: #333;
+  color: rgb(255, 245, 134);
 }
 
 .tituloFeedback {
@@ -504,25 +510,34 @@ body {
 /*Estilização da seção Cuidados e Alertas*/
 
 .cuidado {
+  width: 100%;
   padding: 13px;
   border: 1px solid #ccc;
   border-radius: 10px;
   margin: 20px auto;
-  background-color: white;
+  background-color: #ffffff;
   border-color: #ddd;
-  margin-top: 5%; 
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-top: -2%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 .cuidado a{
   display: flex;
 }
 
+.exclamacao{
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: rgb(146, 130, 12);
+  margin-top: -30px;
+}
+
 .cuidado h3 {
   font-size: 22px;
   font-weight: bold;
-  color: #333;
+  color: #000000;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -531,15 +546,15 @@ body {
 
 .cuidado p {
   font-size: 20px;
-  color: #666;
+  color: #000000;
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
 .cuidados h2 {
-  width: 80%;
-  margin: 30px auto;
+  width: 100%;
+  margin: 20px auto;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -548,95 +563,87 @@ body {
 }
 
 .btnCuidados {
-  width: 100%;
-  background-color: black;
+  width: 50%;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  display: flex;
   color: white;
   border: 1px solid rgb(200, 200, 200);
   padding: 12px;
   border: 1px solid #000;
   border-radius: 5px;
-  background-color: #000;
+  background-color: rgb(74, 8, 121);
   font-weight: bold;
+  text-decoration: none; 
   cursor: pointer;
-  margin-left: 15%;
-  margin-right: 15%;
 }
-
 
 @media (max-width: 490px) {
   .btnCuidados{
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 100%;
   }
 }
 
 /* Estilização seção de Formulário */
 
-form {
-  margin: 20px auto;
-  padding: 20px;
-  margin-top: 5%; 
-  margin-left: 35%;
-  margin-right: 35%;
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
   border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #ffffff;
-  border-color: #ddd;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-label {
-  font-size: 16px;
-  font-weight: normal;
-  margin-bottom: 5px;
-  color: #666;
-}
-
-
-.inputFormulario {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
   border-radius: 5px;
-  margin-bottom: 10px;
-  border-color: #ccc;
+  background-color: rgb(74, 8, 121);
 }
 
-.btnFormulario {
+.tituloForm {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #000;
+  text-align: center;
+  color: white;
+}
+
+.form-item input[type="text"],
+.form-item input[type="email"],
+.form-item input[type="text"] {
+  width: 100%;
+  padding: 10px; 
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #000;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #fff;
+  margin-bottom: 20px;
 }
 
-.btnFormulario:hover {
-  background-color: #3e3e3e;
+.mensagem-erro {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
 }
 
-@media (max-width: 759px) {
-  form{
-    margin-left: 15%;
-    margin-right: 15%;
-  }
+.btn-cadastro {
+  width: 100%;
+  padding: 10px; 
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: -5px;
+  margin-bottom: 20px;
+  background-color: rgb(226, 207, 0);
+  color: white;
+
 }
 
-@media (min-width: 760px) {
-  form{
-    margin-left: 23%;
-    margin-right: 23%;
-  }
-}
+.btn-cadastro:hover {
+  background-color: #0056b3;
+} 
+
 
 
 /* Estilização da seção de Rodapé */
@@ -647,6 +654,7 @@ label {
   display: flex;
   margin: auto;
   text-align: center;
+
 }
 
 .links-importantes,
@@ -689,17 +697,23 @@ li a:hover {
   color: #333;
 }
 
+.logo1{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+}
 
 @media only screen and (max-width: 768px) {
   .divForm {
-    flex-direction: column; /* Altera o layout para coluna em telas menores */
+    flex-direction: column; 
   }
   
 }
 
 @media only screen and (max-width: 474px) {
   .centralizar {
-    width: 50%; /* Define a largura para ocupar 90% da tela */
+    width: 50%; 
     margin-left: 1%;
     margin-right: 1%;
     display: grid;

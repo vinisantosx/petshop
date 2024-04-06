@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PetStop</title>
-  <link rel="Stylesheet" href="StyleCarrinho.css">
+  <link rel="Stylesheet" href="StyleProduto.css">
 </head>
 
 <body>
@@ -20,9 +20,8 @@
       <li><a href="#" class="navSecoes"></a></li>
     </ul>
 
-    <a href="Carrinho.html"><img src="img/LogoCarrinhoCompras.png" alt="Carrinho de Compras" class="carrinho"></a>
+    <a href="checkout.html"><img src="img/LogoCarrinhoCompras.png" alt="Carrinho de Compras" class="carrinho"></a>
   </nav>
-</body>
 
 <h1 class="tituloCarrinho">Carrinho de Compras</h1><br><br>
 <div class="container">
@@ -50,8 +49,11 @@
     <div class="cart-total">
       <p>Total: R$ <span id="total">20,00</span></p><br>
     </div>
+    <div class="cart-total">
+      <a href="checkout.html"><button class="btnProdutos">Finalizar Compra</button></a>
+    </div>
 
-    </script>
+    <script src="calculo.js"></script>
 
     <section class="Consulta">
       <div>
@@ -203,5 +205,4 @@
 
 <script src="calculo.js"></script>
 </body>
-
 </html>

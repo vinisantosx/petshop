@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="checkout.css">
+    <script src="Calculo.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html"><img src="img/Teste preto e branco logo PetStop.png" alt="Logo da Loja" class="logo"></a>
+    
+        <ul class="navUl">
+          <li><a href="#Produtos" class="navSecoes">Produtos</a></li>
+          <li><a href="Servicos.html" class="navSecoes">Serviços</a></li>
+          <li><a href="#Sobre" class="navSecoes">Sobre</a></li>
+          <li><a href="#Contato" class="navSecoes">Contato</a></li>
+          <li><a href="#" class="navSecoes"></a></li>
+        </ul>
+    
+        <a href="Carrinho.html"><img src="img/LogoCarrinhoCompras.png" alt="Carrinho de Compras" class="carrinho"></a>
+      </nav>
+
+      <div class="checkout">
+    <section id="carrinho">
+        <h2>Itens no Carrinho</h2>
+        <ul id="itens-carrinho">
+        </ul>
+        <p id="total"></p>
+        <button class="btnLimpar" onclick="limparCarrinho()">Limpar Carrinho</button>
+
+        <form id="checkout-form">
+            <label for="forma-pagamento">Forma de Pagamento:</label>
+            <select id="forma-pagamento" name="forma-pagamento">
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="boleto">Boleto</option>
+            </select>
+            <br>
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" maxlength="9" pattern="\d{5}-?\d{3}" placeholder="00000-000">
+            <button class="btnBuscaCep" type="button" onclick="buscarEndereco()">Buscar</button>
+            <div id="endereco"></div>
+            <br>
+            <button type="submit">Finalizar Compra</button>
+        </form>
+    </section>
+</div>
+    <script>
+
+        function calcularTotal() {
+            const cart = JSON.parse(localStorage.getItem('carrinho'));
+            let total = 0;
+            if (cart && cart.length > 0) {
+                cart.forEach(item => {
+                    total += item.preco;
+                });
+                const endereco = document.getElementById('endereco').innerText;
+                if (endereco) {
+                    total += 10;
+                }
+            }
+            document.getElementById('total').textContent = `Total: R$ ${total.toFixed(2)}`;
+            return total;
+        }
+
+        function displayCart() {
+            const cart = JSON.parse(localStorage.getItem('carrinho'));
+            const cartList = document.getElementById('itens-carrinho');
+
+            cartList.innerHTML = '';
+
+            if (cart && cart.length > 0) {
+                cart.forEach((item, index) => {
+                    const cartItem = document.createElement('li');
+
+                    const img = document.createElement('img');
+                    img.src = item.imagem;
+                    img.alt = item.nome;
+                    cartItem.appendChild(img);
+
+                    const text = document.createElement('span');
+                    text.textContent = item.nome + ' - R$ ' + item.preco.toFixed(2);
+                    cartItem.appendChild(text);
+
+                    const removeButton = document.createElement('button');
+                    removeButton.textContent = 'Remover';
+                    removeButton.className = 'removeButton';
+                    removeButton.addEventListener('click', () => {
+                        cart.splice(index, 1);
+                        localStorage.setItem('carrinho', JSON.stringify(cart));
+                        displayCart();
+                        calcularTotal();
+                    });
+                    cartItem.appendChild(removeButton);
+
+                    cartList.appendChild(cartItem);
+                });
+            } else {
+                cartList.innerHTML = '<p>Carrinho vazio</p>';
+            }
+
+            calcularTotal();
+        }
+
+        function limparCarrinho() {
+            localStorage.removeItem('carrinho');
+            displayCart();
+        }
+
+        function buscarEndereco() {
+            const cep = document.getElementById('cep').value.replace(/\D/g, '');
+            const url = `https://viacep.com.br/ws/${cep}/json/`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.erro) {
+                        document.getElementById('endereco').innerText = "CEP não encontrado.";
+                    } else {
+                        const endereco = `Endereço: ${data.logradouro}, ${data.bairro}, ${data.localidade}, ${data.uf}`;
+                        document.getElementById('endereco').innerText = endereco;
+
+                        calcularTotal();
+                    }
+                })
+                .catch(error => console.error('Erro:', error));
+        }
+
+        document.getElementById('checkout-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const total = calcularTotal();
+            const formaPagamento = document.getElementById('forma-pagamento').value;
+            const cep = document.getElementById('cep').value;
+
+            limparCarrinho();
+        }); 
+
+        window.onload = function() {
+            displayCart();
+        };
+    </script>
+</body>
+</html>     

@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:wght@100..900&display=swap');  
 
 
 * {
-  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
   padding: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   font-family: Inter, sans-serif;
 }
 
@@ -13,11 +14,12 @@ html {
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: rgb(221, 221, 221);
   font-family: sans-serif;
   margin: 0;
   padding: 0;
 }
+
 
 .navbar {
   background-color: #fff;
@@ -35,12 +37,19 @@ body {
   cursor: pointer;
 }
 
+.logo1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
 .navUl {
   display: flex;
   gap: 80px;
 }
 
-.navSecoes{
+.navSecoes {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
@@ -54,70 +63,180 @@ body {
 
 /* Navbar Responsiva */
 @media (max-width: 800px) {
-  .navUl{
+  .navUl {
     display: inline-table;
   }
 }
 
-@media(min-width: 801px){
-  .navUl{
+@media(min-width: 801px) {
+  .navUl {
     display: flex;
   }
 }
 
-.SectionHome{
-    background-color: rgb(255, 255, 255);
-    margin-bottom: 80px;
+
+/* Estilização da seção Home*/
+
+
+.SectionHome {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 90%;
 }
 
-.teste{
-    background-color: blue;
+/* Estilização da seção Principal*/
+
+.imgPrincipal {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.imgPrincipal{
-    width: 380px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-}
-
-.ulPrincipal{
-    background-color:white;
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    align-items: center;
-    margin-top: 150px;
-    margin-left: 120px;
-    margin-right: 130px;
+.ulPrincipal {
+  background-color: rgb(221, 221, 221);
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  align-items: center;
+  margin: 0;
+  flex-wrap: wrap;
 }
 
 .imgPrincipal {
-    opacity: 1;
-    transition: transform 0.5s, opacity 0.5s;
-  }
-  
-  .imgPrincipal:hover {
-    opacity: 1;
-    transform: scale(1.1);
+  opacity: 1;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.imgPrincipal:hover {
+  opacity: 0.8;
+  transform: scale(1.01);
+}
+
+@media (max-width: 759px) {
+  .imgPrincipal {
+    flex-direction: column;
+    display: grid;
+    align-items: center;
   }
 
-    /* Estilização da seção de Rodapé */
+  .ulPrincipal {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
-.container2 {
+@media (min-width: 760px) {
+  .imgPrincipal {
+    display: flex;
+    align-items: center;
+  }
+
+  .ulPrincipal {
+    flex-direction: row;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 20px;
+  }
+}
+
+/* Estilização da Seção blog de cuidados e alertas*/
+
+.container{
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 16px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+  display: inline-flexbox;
+}
+
+.TituloCuidados{
+  font-size: 30px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.SubtituloCuidados{
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.txtCuidados{
+  font-size: 18px;
+  margin-left: 90px;
+  margin-right: 90px;
+}
+
+.ulCuidados{
+  margin-left: 110px;
+  margin-right: 110px;
+}
+
+.teste{
+  display: flex;
+}
+
+.imgCuidados{
+  margin-right: 150px;
+  width: 400px;
+  height: 200px;
+  margin-top: 50px;
+}
+
+/* Regras de Mídia Queries para dispositivos de largura máxima de 768px */
+@media screen and (max-width: 768px) {
+  .container {
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
-  .links-importantes, .redes-sociais, .contatos {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+  .SubtituloCuidados,
+  .txtCuidados,
+  .ulCuidados {
+    margin-left: 2%;
+    margin-right: 2%;
   }
+
+  .teste {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgCuidados {
+    margin-right: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+    /* Estilização da seção de Rodapé */
+
+    .divForm {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      margin: auto;
+      text-align: center;
+    }
+    
+    .links-importantes,
+    .redes-sociais,
+    .contatos {
+      
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      margin-left: 5%;
+      margin-right: 5%;
+      
+    }
 
   .centralizar{
     display: flex;
@@ -156,6 +275,23 @@ body {
     margin-right: 10px;
     color: #333;
   }
+
+  @media only screen and (max-width: 768px) {
+    .divForm {
+      flex-direction: column; /* Altera o layout para coluna em telas menores */
+    }
+    
+  }
+  
+  @media only screen and (max-width: 474px) {
+    .centralizar {
+      width: 50%; /* Define a largura para ocupar 90% da tela */
+      margin-left: 1%;
+      margin-right: 1%;
+      display: grid;
+    }
+  }
+  
 
   /*Estilização dos direitos reservados*/
 

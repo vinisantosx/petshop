@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+.tituloCarrinho{
+  justify-content: center;
+  display: flex;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #dddddddd;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%; 
+  transform: translateX(-50%);
+  width: 100%; 
+  height: 6px; 
+  background-color: rgb(74, 8, 121); 
+}
+
+.navbar:hover {
+  color: #000000; 
+}
+.logo {
+  width: 125px;
+  height: 75px;
+  cursor: pointer;
+}
+
+.navUl {
+  display: flex;
+  gap: 80px;
+  list-style-type: none;
+}
+
+.navSecoes {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.carrinho {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Navbar Responsiva */
+@media (max-width: 800px) {
+  .navUl {
+    display: inline-table;
+  }
+}
+
+@media(min-width: 801px) {
+  .navUl {
+    display: flex;
+  }
+}
+
+/* Estilização da div de Checkout */
+
+
+.checkout {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+  #itens-carrinho button {
+    background-color: #c00101;
+    color: #fff;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 12%; /* Define a largura total do botão */
+  }
+
+  #itens-carrinho img {
+    max-width: 100px; /* Define a largura máxima das imagens */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+#itens-carrinho {
+    list-style-type: none;
+    padding: 0;
+}
+
+#itens-carrinho li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#total {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#checkout-form {
+    margin-top: 20px;
+}
+
+#checkout-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#checkout-form input[type="text"],
+#checkout-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#checkout-form button[type="submit"] {
+    background-color: #02bb05;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#checkout-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.btnLimpar{
+    background-color: #cd2b02;
+    color: #fff;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    margin-top: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 20%; /* Define a largura total do botão */
+}
+
+.btnBuscaCep{
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    margin-top: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 12%; /* Define a largura total do botão */
+}
